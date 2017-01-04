@@ -7,7 +7,4 @@ RUN git clone https://github.com/chop-dbhi/dicom-anon.git
 
 RUN pip install --no-cache-dir -r dicom-anon/requirements.txt
 
-COPY ./input /usr/src/app/input
-COPY ./output /usr/src/app/output
-
-CMD [ "python", "dicom-anon/dicom_anon.py" ]
+CMD [ "python", "dicom-anon/dicom_anon.py", "/input", "/output", "-q", "/quarantine", "-m", "US"]

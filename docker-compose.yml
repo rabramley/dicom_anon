@@ -6,3 +6,11 @@ services:
     build: ./dicom_anon
     volumes:
       - ./input:/input
+      - ./output:/output
+      - ./quarantine:/quarantine
+  fullanon:
+    restart: always
+    build: ./fullanon
+    volumes:
+      - ./input:/input
+      - ./output:/output
