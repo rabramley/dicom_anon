@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  dicom_anon:
+    restart: always
+    build: ./dicom_anon
+    volumes:
+      - ./input:/input
